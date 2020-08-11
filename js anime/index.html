@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anime</title>
+    <style>
+        #box{
+                width: 150px;
+                height: 150px;
+                background-color: skyblue;
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    <div id="box"></div>
+</body>
+</html>
+<script>
+    var elem = document.querySelector('#box');
+    elem.animate([
+        {transform: 'translate(0, 0)', background: "blue"},
+        {transform: 'translate(1000px, 0)', background: "yellow"},
+        {transform: 'translate(1000px, 500px)', background: "orange"},
+        {transform: 'translate(0, 500px)', background: "skyblue"},
+        {transform: 'translate(0, 0)', background: "blue"},
+    ],{
+        duration: 3000,
+        iterations: Infinity,
+    })
+</script>
